@@ -94,6 +94,9 @@ html, body{
   .flash-cards{
     flex-direction: column;
   }
+  .card{
+      margin-bottom: 40px;
+  }
   .table{
     display: flex;
     flex-direction: column;
