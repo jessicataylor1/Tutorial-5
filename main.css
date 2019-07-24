@@ -10,6 +10,10 @@ html, body{
     background-color: white;
 }
 
+.content {
+    display: flex;
+}
+
 .content, .flash-cards, .table{
     max-width: 1200px;
     background-color: white;
@@ -17,10 +21,19 @@ html, body{
     margin: 0 auto;
 }
 
+.main-content:nth-child(1){order: 2;}
+.sidebar-1:nth-child(2){order: 1;}
+.sidebar-2:nth-child(3){order: 3;}
+
 .card{
     padding: 25px;
     box-sizing: border-box;
     margin-bottom: 20px;
+}
+
+.flash-cards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-1{
