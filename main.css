@@ -5,22 +5,33 @@ html, body{
 }
 
 .header{
+    display: flex;
+    justify-content: center;
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
 }
 
 .content, .flash-cards, .table{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
     max-width: 1200px;
-    background-color: white;
     padding: 20px;
     margin: 0 auto;
+}
+
+
+.content{
+  background-color: white;
 }
 
 .card{
     padding: 25px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    margin: 2.5%;
 }
 
 .card-1{
@@ -36,30 +47,77 @@ html, body{
 }
 
 .table{
-    max-width: 850px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    width: 50%;
 }
 
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
+    flex: 1;
 }
 
 .secondary-page{
-    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+    flex: 1;
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
+    flex: 1;
 
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    flex: 1;
 }
 
+@media (max-width: 1380px){
+  .content{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 1024px){
+  .flash-cards{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+  }
+
+  .main-content{
+    order: -1;
+  }
+
+  .sidebar-1, .sidebar-2{
+    display: none;
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin-left: 11%;
+  }
+
+  .table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    width: 50%;
+  }
+}
