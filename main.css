@@ -8,19 +8,50 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    text-align: center;
+}
+.content {
+  display: flex;
 }
 
-.content, .flash-cards, .table{
+.main-content {
+  order: 2;
+  flex: 2;
+}
+
+.sidebar-1 {
+  order: 1;
+  flex: 1;
+}
+
+.sidebar-2 {
+  order: 3;
+  flex: 1;
+}
+@media (max-width: 750px){
+  .sidebar-1, .sidebar-2 {
+    display: none;
+ }
+}
+.content, .flash-cards, .table {
     max-width: 1200px;
     background-color: white;
     padding: 20px;
-    margin: 0 auto;
+    margin: auto;
+
 }
 
 .card{
     padding: 25px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    margin: 10px;
+}
+
+.flash-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .card-1{
@@ -35,31 +66,61 @@ html, body{
     background-color: aqua;
 }
 
+ @media (max-width: 750px)  {
+  .flash-cards {
+    display: flex;
+    flex-direction: column;
+}
+}
+
 .table{
     max-width: 850px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    display: flex;
 }
 
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
+    max-width: 35%;
+    flex-direction: row;
+    flex: 2;
 }
 
 .secondary-page{
-    
+ display: flex;
+ flex-direction: column;
+ min-width: 65%;
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+    order: 1;
+    flex: 1;
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
-
+    order: 2;
+    flex: 1;
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    order: 3;
+    flex: 1;
+}
+@media (max-width: 750px){
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+@media (max-width: 750px){
+  .main-page {
+    min-width: 95%;
+
+  }
+}
