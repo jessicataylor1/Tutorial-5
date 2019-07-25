@@ -8,6 +8,7 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    text-align: center;
 }
 
 .content {
@@ -25,6 +26,22 @@ html, body{
 .sidebar-1:nth-child(2){order: 1;}
 .sidebar-2:nth-child(3){order: 3;}
 
+.main-content{
+    flex: 2;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.sidebar-1{
+    flex: 1;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.sidebar-2{
+    flex: 1;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 .card{
     padding: 25px;
     box-sizing: border-box;
@@ -33,46 +50,81 @@ html, body{
 
 .flash-cards {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .card-1{
     background-color: lightpink;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .card-2{
     background-color: limegreen;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .card-3{
     background-color: aqua;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .table{
     max-width: 850px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
+    max-width: 40%;
+    min-height: 30%;
 }
 
 .secondary-page{
-    
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+    text-align: center;
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
-
+    text-align: center;
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    text-align: center;
 }
 
+@media (max-width: 769px){
+    .flash-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar-1{
+        display: none;
+    }
+    .sidebar-2{
+        display: none;
+    }
+
+    .table{
+        flex-direction: column;
+    }
+
+    .main-page{
+        max-width: none;
+    }
+
+}
