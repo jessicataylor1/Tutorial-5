@@ -8,14 +8,24 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    display:flex;
+    justify-content: center;
 }
 
 .content, .flash-cards, .table{
     max-width: 1200px;
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    text-align:center;
 }
+
+.main-content:nth-child(1){order:2}
+.sidebar-1:nth-child(2){order:1}
+.sidebar-2:nth-child(3){order:3}
+
 
 .card{
     padding: 25px;
@@ -25,10 +35,13 @@ html, body{
 
 .card-1{
     background-color: lightpink;
+    margin-right: 10px;
 }
 
 .card-2{
     background-color: limegreen;
+    margin-right: 10px;
+
 }
 
 .card-3{
@@ -39,27 +52,66 @@ html, body{
     max-width: 850px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
 }
 
 .secondary-page{
-    
+  align-items: stretch;
+  width: 100%;
+  flex:1;
+
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+     padding: 8px;
+     flex:1;
+
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
+     padding: 8px;
+     flex:1;
+
 
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    padding: 8px;
+    flex:1;
+
 }
 
+@media (max-width: 769px){
+  .flash-cards, .content, .section-1, .section-2, .section-3{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 769px){
+    .sidebar-1, .sidebar-2{
+      display: none;
+    }
+  }
+
+
+ @media (max-width: 769px) {
+  .table{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column; 
+
+  }
+}
