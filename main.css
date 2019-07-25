@@ -8,6 +8,8 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    justify-content: center;
+    text-align: center;
 }
 
 .content, .flash-cards, .table{
@@ -15,6 +17,10 @@ html, body{
     background-color: white;
     padding: 20px;
     margin: 0 auto;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+
 }
 
 .card{
@@ -25,6 +31,7 @@ html, body{
 
 .card-1{
     background-color: lightpink;
+
 }
 
 .card-2{
@@ -47,7 +54,7 @@ html, body{
 }
 
 .secondary-page{
-    
+
 }
 
 .section-1{
@@ -63,3 +70,58 @@ html, body{
     background-color: rgb(74, 91, 139);
 }
 
+@media only screen and (min-width: 500px){
+  .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .flash-cards{
+    display: flex;
+    justify-content: column;
+    flex-direction: row;
+  }
+
+  .table{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: flex-end;
+  }
+
+  .main-content{
+    order: 2;
+    flex: 3;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .sidebar-1{
+    order: 1;
+    flex: 1;
+  }
+
+  .sidebar-2{
+    order: 3;
+    flex: 1;
+  }
+
+  .card{
+    margin: 1vw;
+  }
+
+  .main-page{
+    flex: 1;
+  }
+
+  .secondary-page{
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    text-align: center;
+  }
+
+}
