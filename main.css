@@ -8,6 +8,7 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    text-align: center;
 }
 
 .content, .flash-cards, .table{
@@ -37,7 +38,7 @@ html, body{
 
 .table{
     max-width: 850px;
-    background-color: antiquewhite;
+    background-color: white;
     margin-bottom: 50px;
 }
 
@@ -47,7 +48,7 @@ html, body{
 }
 
 .secondary-page{
-    
+
 }
 
 .section-1{
@@ -63,3 +64,48 @@ html, body{
     background-color: rgb(74, 91, 139);
 }
 
+@media only screen and (min-width: 769px){
+  .content, .flash-cards, .table{
+    display:flex;
+    margin-bottom: 3vw;
+  }
+
+  .main-content{
+    order: 2;
+    flex: 3;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .sidebar-1{
+    order: 1;
+    flex: 1;
+  }
+  .sidebar-2{
+    order: 3;
+    flex: 1;
+  }
+  .card{
+    flex:60%;
+  }
+  .main-page{
+    flex:1;
+  }
+  .secondary-page{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    text-align: center;
+
+  }
+  .flash-cards{
+    padding: 20px;
+  }
+  .card{
+    padding:30px;
+    margin:20px;
+
+  }
+
+}
