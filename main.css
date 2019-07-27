@@ -5,22 +5,53 @@ html, body{
 }
 
 .header{
-    max-width: 500px;
-    margin: 50px auto;
-    background-color: white;
+  max-width: 50%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
 }
 
 .content, .flash-cards, .table{
-    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
     padding: 20px;
-    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.content, .flash-cards, .table{
+    max-width: 80%;
+}
+
+.content{
+  display: flex;
+}
+
+.main-content{
+  padding: 0px 50px;
+  flex: 2;
+}
+
+.sidebar-1{
+  flex: 1;
+}
+
+.sidebar-2{
+  flex: 1;
+}
+
+.main-content:nth-child(1){order: 2;}
+.sidebar-1:nth-child(2){order: 1;}
+.sidebar-2:nth-child(3){order: 3;}
+
+.flash-cards{
+    display: flex;
+    justify-content: space-between;
 }
 
 .card{
     padding: 25px;
     box-sizing: border-box;
-    margin-bottom: 20px;
 }
 
 .card-1{
@@ -29,6 +60,7 @@ html, body{
 
 .card-2{
     background-color: limegreen;
+    margin: 0 10px;
 }
 
 .card-3{
@@ -36,18 +68,28 @@ html, body{
 }
 
 .table{
-    max-width: 850px;
-    background-color: antiquewhite;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
+    display: flex;
 }
 
 .main-page{
+    flex: 1;
     background-color: rgb(113, 243, 182);
-    padding: 15px;
+    padding-left: 5px;
 }
 
 .secondary-page{
-    
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-1, .section-2, .section-3{
+  flex: 1;
 }
 
 .section-1{
@@ -56,10 +98,44 @@ html, body{
 
 .section-2{
     background-color: rgb(105, 129, 197);
-
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
 }
 
+@media (max-width: 768px){
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content{
+    padding: 0px;
+  }
+
+  .main-content:nth-child(1){order: 1;}
+  .sidebar-1:nth-child(2){order: 2;}
+  .sidebar-2:nth-child(3){order: 3;}
+
+  .flash-cards, .card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-page{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-2{
+    margin: 10px 0;
+  }
+}
