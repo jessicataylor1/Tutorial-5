@@ -8,6 +8,7 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    text-align: center;
 }
 
 .content, .flash-cards, .table{
@@ -15,12 +16,27 @@ html, body{
     background-color: white;
     padding: 20px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
+.main-content{
+    flex: 2;
+}
+
+.sidebar-1{
+    flex: 1;
+    
+}
+
+.sidebar-2{
+    flex: 1;
+}
 .card{
     padding: 25px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    display: block;
+    margin: 5%;
 }
 
 .card-1{
@@ -39,27 +55,101 @@ html, body{
     max-width: 850px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    overflow:hidden;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5%;
+    
 }
 
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
+    width:50%;
+    
 }
 
 .secondary-page{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+    flex: 1;
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
-
+    flex: 1;
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    flex: 1;
 }
 
+@media (max-width: 768px){
+    .content{
+        max-width: 568px; 
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .main-content{
+        float: left;
+       
+    }
+
+    .sidebar-1{
+        float: left;
+        
+    }
+
+    .sidebar-2{
+        float: left;
+
+    }
+    
+    .flash-cards{
+        margin-top: 5%;
+        display: block;
+        background-color: antiquewhite;
+        
+        
+    }
+    
+    .card-1{
+        float: left;
+    }
+
+    .card-2{
+        float: left;
+    }
+
+    .card-3{
+        float: left;
+    }
+    
+    .table{
+        display: flex;
+        flex-direction: column;
+        clear: both;
+        overflow: hidden;
+        margin: 0 auto;
+        
+    }
+    .main-page{
+        margin: 0 auto;
+        flex: 1;
+    }
+
+    .secondary-page{
+        margin: 0 auto;
+           
+     }
+}
