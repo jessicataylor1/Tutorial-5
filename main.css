@@ -8,6 +8,9 @@ html, body{
     max-width: 500px;
     margin: 50px auto;
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content, .flash-cards, .table{
@@ -17,10 +20,28 @@ html, body{
     margin: 0 auto;
 }
 
+.main-content{
+        flex: 2;
+        order: 2;
+}
+
+.sidebar-1{
+    display: none;
+}
+
+.sidebar-2{
+    display: none;
+}
+
+.flash-cards{
+    justify-content: space-between;
+}
+
 .card{
     padding: 25px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    flex-basis: 30%;
 }
 
 .card-1{
@@ -44,22 +65,50 @@ html, body{
 .main-page{
     background-color: rgb(113, 243, 182);
     padding: 15px;
-}
-
-.secondary-page{
-    
+    flex: 1;
 }
 
 .section-1{
     background-color: rgb(135, 166, 250);
+    display: flex;
+    justify-content: center;
 }
 
 .section-2{
     background-color: rgb(105, 129, 197);
+    display: flex;
+    justify-content: center;
 
 }
 
 .section-3{
     background-color: rgb(74, 91, 139);
+    display: flex;
+    justify-content: center;
 }
 
+@media (min-width: 769px){
+
+    .secondary-page{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .content, .flash-cards, .table{
+        display: flex;
+    }
+
+    .sidebar-1{
+        flex: 1;
+        order: 1;
+        display: block;
+    }
+    
+    .sidebar-2{
+        flex: 1;
+        order: 3;
+        display: block;
+    }
+
+}
