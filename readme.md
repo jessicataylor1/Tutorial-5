@@ -21,3 +21,6 @@ Please name your branches with your first name and last initial i.e. *emilS*.
 git push origin [new_branch_name]
 ```
  Do not push back up to the master branch.
+ 
+ Refer to this resource to try and figure out how to use flexbox:
+ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
