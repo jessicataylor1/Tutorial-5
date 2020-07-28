@@ -12,7 +12,7 @@ git checkout -b [new_branch_name]
 ```
 Please name your branches with your first name and last initial i.e. *emilS*.
 
-3. Examine the wireframes. The goal is to create a responsive version of the webpage using flexbox and media queries that adheres to the wireframes.
+3. Examine the wireframes. The goal is to create a responsive version of the webpage using flexbox and media queries that adheres to the wireframes. Interpret the wireframes loosely using borders and background colour to differentiate your elements and use lorem ipsum placeholder for your content. Do not get too wrapped up is the aesthetics of this
 
 4. When you have finished with the code, stage and commit your work.
 
